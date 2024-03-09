@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // let user = {};
+        // [user.namaDepan, user.namaBelakang, user.namaPanggilan] = 'albab ghozhari simanjuntk'.split(' ')
+
+        // console.log(user);
+        // console.log(user.namaDepan); 
+        // console.log(user.namaBelakang);
+
+        // let orang = {
+        //     nama: 'albab',
+        //     umur: 25,
+        //     sudahMenikah: false,
+        // };
+
+        // let {nama, umur, sudahMenikah} = orang;
+
+        // console.log(nama);
+        // console.log(umur);
+        // console.log(sudahMenikah);
+
+        //  destrukturisasi jika objeknya bertingkat
+        let murid = {
+            kelas: '12a',
+            nama:['uwan', 'aziz', 'fajari'],
+            prestasi: {
+                olahraga: 'juara 1',
+                akademik: 'juara 2'
+            }
+        }
+        
+
+        let {
+            kelas,
+            nama: [murid1,murid2,murid3],
+            prestasi: {olahraga, akademik}
+        } = murid;
+
+        // console.log(kelas,murid1,olahraga);
+        // console.log(kelas);
+        // console.log(murid1);
+        // console.log(olahraga);
+        // console.log(akademik);
+        // console.log(murid.prestasi);
+
+        console.log()
+    
+    </script>
+</body>
+</html>

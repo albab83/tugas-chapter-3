@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myform">
+        <label for="passowrd">Buat Password</label>
+        <input type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" />
+        <input type="submit" value="simpan" />
+        <p id="invalid-passowrd" style="display:none;color:red">Panjang password minimal 8 kareter, dan harus mengandung huruf kapital, angka, dan simbol</p>
+    </form>
+
+    <h1>berapa hasil dari 65 x 56? </h1>
+    <p>kalau kamu tidak tahu coba geser mouse dimana saja</p>
+
+    <h1 id="hasil">Hasilnya Adalah</h1>
+
+    <input type="button" value="kuning" onclick="warna('yellow')"/>
+    <input type="button" value="kembalikan warna ke semula" onclick="waranaBawaan('white')"/>
+
+
+    <script>
+
+        const passwordField = document.querySelector ("[name=password]");
+
+        passwordField.addEventListener("keyup", (event) => {
+            if(!passwordField.validity.valid){
+                console.error("passowrd invalid");
+                document.getElementById("invalid-passowrd").style.display = "block";
+            } else {
+                console.info("passowrd valid");
+                document.getElementById("invalid-passowrd").style.display = "none";
+            }
+        });
+
+        // coba ya 
+
+        let paragraph = `Hai Nama Saya Albab `;
+        let regex = /hai/i;
+        let cari = paragraph.match(regex);
+
+        console.log(cari)
+
+        let a = 65;
+        let udin = 54;
+
+        document.addEventListener('mouseover', function(){
+            cobaKlik(a, udin);
+        })
+        document.addEventListener('mouseout', function(){
+            mouseKeluar();
+        })
+
+        function cobaKlik(a, b) {
+            let result = a * b;
+            document.getElementById('hasil').innerHTML = result;
+        }
+
+        function mouseKeluar(){
+            document.getElementById("hasil").innerHTML = 'Hasilnya Adalah'
+        }
+    function warna(color){
+        document.body.style.background = color;
+    }
+    function waranaBawaan(color){
+        document.body.style.background = "none";
+    }
+
+    </script>
+</body>
+</html>
